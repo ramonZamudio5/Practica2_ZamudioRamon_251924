@@ -1,0 +1,523 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.2 (Python 3.13.9 on darwin)" generated="2026-03-27T10:57:04.750768" rpa="false" schemaversion="5">
+<suite id="s1" name="Test" source="/Users/ramonsebastianzamudioayala/PycharmProjects/PythonProject/Test/test.robot">
+<kw name="Abrir Navegador" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-03-27T10:57:04.825960" level="INFO">Opening browser 'chrome' to base url 'https://www.demoblaze.com/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-03-27T10:57:04.825842" elapsed="3.025579"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-03-27T10:57:07.851722" elapsed="0.334904"/>
+</kw>
+<status status="PASS" start="2026-03-27T10:57:04.825541" elapsed="3.361287"/>
+</kw>
+<test id="s1-t1" name="1. Verificar la Funcionalidad de Agregar al Carrito" line="13">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2026-03-27T10:57:08.187617" level="INFO">Opening url 'https://www.demoblaze.com/'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2026-03-27T10:57:08.187460" elapsed="0.027374"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//a[contains(text(),'Samsung galaxy s6')]</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-03-27T10:57:08.215157" elapsed="0.432101"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-03-27T10:57:08.647719" level="INFO">Clicking element 'xpath=//a[contains(text(),'Samsung galaxy s6')]'.</msg>
+<arg>xpath=//a[contains(text(),'Samsung galaxy s6')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-27T10:57:08.647494" elapsed="2.278477"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//a[text()='Add to cart']</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-03-27T10:57:10.926181" elapsed="0.430744"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-03-27T10:57:11.357651" level="INFO">Clicking element 'xpath=//a[text()='Add to cart']'.</msg>
+<arg>xpath=//a[text()='Add to cart']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-27T10:57:11.357326" elapsed="0.025377"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-03-27T10:57:13.385828" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-03-27T10:57:11.382931" elapsed="2.003218"/>
+</kw>
+<kw name="Handle Alert" owner="SeleniumLibrary">
+<msg time="2026-03-27T10:57:13.387200" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<arg>ACCEPT</arg>
+<doc>Handles the current alert and returns its message.</doc>
+<status status="PASS" start="2026-03-27T10:57:13.386776" elapsed="0.005809"/>
+</kw>
+<doc>Verifica que se pueda agregar un producto al carrito[cite: 30].</doc>
+<status status="PASS" start="2026-03-27T10:57:08.186944" elapsed="5.206043"/>
+</test>
+<test id="s1-t2" name="2. Verificar el Flujo de Compra de un Producto" line="23">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2026-03-27T10:57:13.395764" level="INFO">Opening url 'https://www.demoblaze.com/cart.html'</msg>
+<arg>${URL}cart.html</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2026-03-27T10:57:13.395309" elapsed="0.279673"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//button[text()='Place Order']</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-03-27T10:57:13.675946" elapsed="0.018070"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-03-27T10:57:13.694315" level="INFO">Clicking element 'xpath=//button[text()='Place Order']'.</msg>
+<arg>xpath=//button[text()='Place Order']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-27T10:57:13.694211" elapsed="0.018901"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=name</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-03-27T10:57:13.713240" elapsed="0.211719"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-27T10:57:13.925218" level="INFO">Typing text 'Juan Perez' into text field 'id=name'.</msg>
+<arg>id=name</arg>
+<arg>Juan Perez</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-27T10:57:13.925096" elapsed="0.058468"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-27T10:57:13.983823" level="INFO">Typing text 'Mexico' into text field 'id=country'.</msg>
+<arg>id=country</arg>
+<arg>Mexico</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-27T10:57:13.983701" elapsed="0.022624"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-27T10:57:14.006583" level="INFO">Typing text 'CDMX' into text field 'id=city'.</msg>
+<arg>id=city</arg>
+<arg>CDMX</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-27T10:57:14.006468" elapsed="0.025466"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-27T10:57:14.032225" level="INFO">Typing text '1234567890123456' into text field 'id=card'.</msg>
+<arg>id=card</arg>
+<arg>1234567890123456</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-27T10:57:14.032095" elapsed="0.024312"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-27T10:57:14.056650" level="INFO">Typing text '12' into text field 'id=month'.</msg>
+<arg>id=month</arg>
+<arg>12</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-27T10:57:14.056540" elapsed="0.022644"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-27T10:57:14.079439" level="INFO">Typing text '2025' into text field 'id=year'.</msg>
+<arg>id=year</arg>
+<arg>2025</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-27T10:57:14.079329" elapsed="0.025006"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-03-27T10:57:14.104615" level="INFO">Clicking element 'xpath=//button[text()='Purchase']'.</msg>
+<arg>xpath=//button[text()='Purchase']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-27T10:57:14.104496" elapsed="0.024205"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//h2[text()='Thank you for your purchase!']</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-03-27T10:57:14.128835" elapsed="0.006857"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-03-27T10:57:14.136101" level="INFO">Clicking element 'xpath=//button[text()='OK']'.</msg>
+<arg>xpath=//button[text()='OK']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-27T10:57:14.135913" elapsed="0.022562"/>
+</kw>
+<doc>Verifica que el usuario pueda completar una compra[cite: 31].</doc>
+<status status="PASS" start="2026-03-27T10:57:13.393435" elapsed="0.765164"/>
+</test>
+<test id="s1-t3" name="3. Verificar la Navegación entre Categorías" line="39">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2026-03-27T10:57:14.158980" level="INFO">Opening url 'https://www.demoblaze.com/'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2026-03-27T10:57:14.158898" elapsed="0.014330"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=itemc</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-03-27T10:57:14.173740" elapsed="0.011148"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-03-27T10:57:14.185146" level="INFO">Clicking element 'xpath=//a[text()='Laptops']'.</msg>
+<arg>xpath=//a[text()='Laptops']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-27T10:57:14.185032" elapsed="0.025436"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-03-27T10:57:16.212097" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-03-27T10:57:14.210650" elapsed="2.001643"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//a[contains(text(),'Sony vaio')]</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-03-27T10:57:16.212683" elapsed="0.015686"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-03-27T10:57:16.229211" level="INFO">Clicking element 'xpath=//a[text()='Monitors']'.</msg>
+<arg>xpath=//a[text()='Monitors']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-27T10:57:16.228810" elapsed="0.026339"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-03-27T10:57:18.255774" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-03-27T10:57:16.255305" elapsed="2.000556"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//a[contains(text(),'Apple monitor')]</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-03-27T10:57:18.256008" elapsed="0.006700"/>
+</kw>
+<doc>Verifica que los filtros de categorías funcionen correctamente[cite: 33].</doc>
+<status status="PASS" start="2026-03-27T10:57:14.158711" elapsed="4.104120"/>
+</test>
+<test id="s1-t4" name="4. Verificar el Envío del Formulario de Contacto" line="52">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2026-03-27T10:57:18.263186" level="INFO">Opening url 'https://www.demoblaze.com/'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2026-03-27T10:57:18.263111" elapsed="0.353959"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//a[text()='Contact']</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-03-27T10:57:18.617227" elapsed="0.006674"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-03-27T10:57:18.624187" level="INFO">Clicking element 'xpath=//a[text()='Contact']'.</msg>
+<arg>xpath=//a[text()='Contact']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-27T10:57:18.624061" elapsed="0.019316"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=recipient-email</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-03-27T10:57:18.643513" elapsed="0.219738"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-27T10:57:18.863946" level="INFO">Typing text 'test@test.com' into text field 'id=recipient-email'.</msg>
+<arg>id=recipient-email</arg>
+<arg>test@test.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-27T10:57:18.863639" elapsed="0.047622"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-27T10:57:18.911502" level="INFO">Typing text 'Juan Perez' into text field 'id=recipient-name'.</msg>
+<arg>id=recipient-name</arg>
+<arg>Juan Perez</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-27T10:57:18.911389" elapsed="0.031376"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-27T10:57:18.943064" level="INFO">Typing text 'Este es un mensaje de prueba.' into text field 'id=message-text'.</msg>
+<arg>id=message-text</arg>
+<arg>Este es un mensaje de prueba.</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-27T10:57:18.942892" elapsed="0.033121"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-03-27T10:57:18.976286" level="INFO">Clicking element 'xpath=//button[text()='Send message']'.</msg>
+<arg>xpath=//button[text()='Send message']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-27T10:57:18.976160" elapsed="0.024582"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-03-27T10:57:21.002438" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-03-27T10:57:19.001030" elapsed="2.001693"/>
+</kw>
+<kw name="Handle Alert" owner="SeleniumLibrary">
+<msg time="2026-03-27T10:57:21.003710" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<arg>ACCEPT</arg>
+<doc>Handles the current alert and returns its message.</doc>
+<status status="PASS" start="2026-03-27T10:57:21.003327" elapsed="0.005227"/>
+</kw>
+<doc>Verifica que el formulario de contacto se envíe[cite: 37].</doc>
+<status status="PASS" start="2026-03-27T10:57:18.262930" elapsed="2.745913"/>
+</test>
+<test id="s1-t5" name="5. Verificar el Registro de Usuario" line="65">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2026-03-27T10:57:21.010046" level="INFO">Opening url 'https://www.demoblaze.com/'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2026-03-27T10:57:21.009767" elapsed="0.038206"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-03-27T10:57:21.048584" level="INFO">Clicking element 'id=signin2'.</msg>
+<arg>id=signin2</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-27T10:57:21.048307" elapsed="0.022803"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=sign-username</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-03-27T10:57:21.071252" elapsed="0.220696"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-27T10:57:21.292467" level="INFO">Typing text 'ramon_final_resuelto' into text field 'id=sign-username'.</msg>
+<arg>id=sign-username</arg>
+<arg>${USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-27T10:57:21.292196" elapsed="0.027116"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-27T10:57:21.319567" level="INFO">Typing text 'pass123' into text field 'id=sign-password'.</msg>
+<arg>id=sign-password</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-27T10:57:21.319443" elapsed="0.025270"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-03-27T10:57:21.344953" level="INFO">Clicking element 'xpath=//button[text()='Sign up']'.</msg>
+<arg>xpath=//button[text()='Sign up']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-27T10:57:21.344840" elapsed="0.020824"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-03-27T10:57:24.366307" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-03-27T10:57:21.365808" elapsed="3.000568"/>
+</kw>
+<kw name="Handle Alert" owner="SeleniumLibrary">
+<msg time="2026-03-27T10:57:24.366592" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<arg>ACCEPT</arg>
+<doc>Handles the current alert and returns its message.</doc>
+<status status="PASS" start="2026-03-27T10:57:24.366506" elapsed="0.001643"/>
+</kw>
+<doc>Verifica que un usuario pueda registrarse[cite: 40].</doc>
+<status status="PASS" start="2026-03-27T10:57:21.009108" elapsed="3.359186"/>
+</test>
+<test id="s1-t6" name="6. Verificar la Funcionalidad de Cerrar Sesión" line="76">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2026-03-27T10:57:24.368903" level="INFO">Opening url 'https://www.demoblaze.com/'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2026-03-27T10:57:24.368765" elapsed="0.020697"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=login2</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-03-27T10:57:24.390372" elapsed="0.009391"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-03-27T10:57:24.400187" level="INFO">Clicking element 'id=login2'.</msg>
+<arg>id=login2</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-27T10:57:24.399990" elapsed="0.019043"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=loginusername</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-03-27T10:57:24.419191" elapsed="0.213443"/>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>id=loginusername</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-27T10:57:24.632757" elapsed="0.008954"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-27T10:57:24.641987" level="INFO">Typing text 'ramon_final_resuelto' into text field 'id=loginusername'.</msg>
+<arg>id=loginusername</arg>
+<arg>${USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-27T10:57:24.641836" elapsed="0.032751"/>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>id=loginpassword</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-27T10:57:24.674723" elapsed="0.013019"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-27T10:57:24.688017" level="INFO">Typing text 'pass123' into text field 'id=loginpassword'.</msg>
+<arg>id=loginpassword</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-27T10:57:24.687870" elapsed="0.024326"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-03-27T10:57:24.712449" level="INFO">Clicking element 'xpath=//button[text()='Log in']'.</msg>
+<arg>xpath=//button[text()='Log in']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-27T10:57:24.712335" elapsed="0.032375"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=logout2</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-03-27T10:57:24.744852" elapsed="12.355422"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-03-27T10:57:39.101301" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-03-27T10:57:37.100507" elapsed="2.001058"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-03-27T10:57:39.102424" level="INFO">Clicking element 'id=logout2'.</msg>
+<arg>id=logout2</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-27T10:57:39.102018" elapsed="0.682551"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=login2</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-03-27T10:57:39.784803" elapsed="0.011160"/>
+</kw>
+<doc>Verifica que el usuario pueda hacer logout.</doc>
+<status status="PASS" start="2026-03-27T10:57:24.368535" elapsed="15.427539"/>
+</test>
+<test id="s1-t7" name="7. Verificar la Visualización de Precios de los Productos" line="101">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2026-03-27T10:57:39.796413" level="INFO">Opening url 'https://www.demoblaze.com/'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2026-03-27T10:57:39.796339" elapsed="0.697830"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//a[contains(text(),'Samsung galaxy s6')]</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-03-27T10:57:40.494384" elapsed="2.076770"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2026-03-27T10:57:42.576824" level="INFO">Element 'xpath=//h5[contains(text(),'$360')]' is displayed.</msg>
+<arg>xpath=//h5[contains(text(),'$360')]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2026-03-27T10:57:42.571282" elapsed="0.005578"/>
+</kw>
+<doc>Verifica que los productos en la página principal tengan precio[cite: 34, 36].</doc>
+<status status="PASS" start="2026-03-27T10:57:39.796167" elapsed="2.780791"/>
+</test>
+<test id="s1-t8" name="8: Verificar la Actualización del Carrito" line="107">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2026-03-27T10:57:42.577277" level="INFO">Opening url 'https://www.demoblaze.com/'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2026-03-27T10:57:42.577216" elapsed="2.074716"/>
+</kw>
+<kw name="Agregar Producto Al Carrito" owner="funcionalidades">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//a[contains(text(),'${nombre_producto}')]</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-03-27T10:57:44.652623" elapsed="0.825893"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-03-27T10:57:45.479104" level="INFO">Clicking element 'xpath=//a[contains(text(),'Samsung galaxy s6')]'.</msg>
+<arg>xpath=//a[contains(text(),'${nombre_producto}')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-27T10:57:45.478762" elapsed="1.722670"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//a[text()='Add to cart']</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-03-27T10:57:47.201619" elapsed="0.636137"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-03-27T10:57:47.838198" level="INFO">Clicking element 'xpath=//a[text()='Add to cart']'.</msg>
+<arg>xpath=//a[text()='Add to cart']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-27T10:57:47.837967" elapsed="0.022342"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-03-27T10:57:49.860956" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-03-27T10:57:47.860417" elapsed="2.000846"/>
+</kw>
+<kw name="Handle Alert" owner="SeleniumLibrary">
+<msg time="2026-03-27T10:57:49.862073" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<arg>ACCEPT</arg>
+<doc>Handles the current alert and returns its message.</doc>
+<status status="PASS" start="2026-03-27T10:57:49.861688" elapsed="0.005282"/>
+</kw>
+<arg>Samsung galaxy s6</arg>
+<doc>Automatiza el clic en un producto y su agregado al carrito.</doc>
+<status status="PASS" start="2026-03-27T10:57:44.652429" elapsed="5.214777"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-03-27T10:57:49.867957" level="INFO">Clicking element 'id=cartur'.</msg>
+<arg>id=cartur</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-27T10:57:49.867545" elapsed="1.168848"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//a[text()='Delete']</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-03-27T10:57:51.036617" elapsed="1.270148"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-03-27T10:57:52.307010" level="INFO">Clicking element 'xpath=//a[text()='Delete']'.</msg>
+<arg>xpath=//a[text()='Delete']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-27T10:57:52.306901" elapsed="0.029552"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-03-27T10:57:54.337942" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-03-27T10:57:52.336585" elapsed="2.001555"/>
+</kw>
+<doc>Agrega un producto y luego lo elimina para asegurar que el botón aparezca</doc>
+<status status="PASS" start="2026-03-27T10:57:42.577040" elapsed="11.761460"/>
+</test>
+<kw name="Close All Browsers" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2026-03-27T10:57:54.339486" elapsed="0.082813"/>
+</kw>
+<doc>Pruebas automatizadas para Demoblaze basadas en los 8 TC.</doc>
+<status status="PASS" start="2026-03-27T10:57:04.751354" elapsed="49.670996"/>
+</suite>
+<statistics>
+<total>
+<stat pass="8" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Test" id="s1" pass="8" fail="0" skip="0">Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
